@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import Breakpriod from '../Breakpriod/Breakpriod';
 import Content from '../Content/Content';
+import Materials from '../Materials/Materials';
 import Profile from '../Profile/Profile';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Home = () => {
+
 
 
     const [contents, setContents] = useState([]);
@@ -13,14 +19,14 @@ const Home = () => {
     const [breaks, setBreaks] = useState([x]);
 
     useEffect(() => {
-        fetch('data.json')
+        fetch('database.json')
             .then(res => res.json())
             .then(data => setContents(data))
     }, [])
 
     const addToShow = (time) => {
         const newWatchTime = parseInt(watch) + time;
-        setWatch(newWatchTime)
+        setWatch(newWatchTime);
     }
 
     const addBreakpriod = (value) => {
@@ -30,7 +36,7 @@ const Home = () => {
         localStorage.setItem("breakpriod", newBreakTime);
     }
 
-    const notify = () => toast("Yay You Completed the whole Series. Congratulations!!");
+    const notify = () => toast("Yahooo, movie ended..");
 
     return (
         <div>
@@ -43,7 +49,7 @@ const Home = () => {
                                 contents.map(content => <Content
                                     key={content.id}
                                     content={content}
-                                    addToField={addToShow}
+                                    addToShow={addToShow}
                                 ></Content>)
                             }
                         </div>
@@ -51,16 +57,17 @@ const Home = () => {
                     <div className=" col-lg-3 pt-5">
 
                         <Profile></Profile>
-                        <BreakTime
-                            addBreakTime={addBreakTime}
+                        <Breakpriod
+                            addBreakpriod={addBreakpriod}
 
-                        ></BreakTime>
-                        <Details
+                        ></Breakpriod>
+                        <Materials
                             watch={watch}
                             breaks={breaks}
-                        ></Details>
+                        ></Materials>
                         <div>
-                            <button onClick={notify} className='btn btn-primary'>Acitivity Complete</button>
+
+                            <button onClick={notify} className='btn btn-primary'>Acitivity added</button>
                             <ToastContainer />
                         </div>
                     </div>

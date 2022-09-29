@@ -1,12 +1,13 @@
 import React from 'react';
+import logo from '.././Images/movie.png';
 
 const Nav = () => {
     return (
-        <div className='container'>
+        <div className='container p-'>
             <nav className="navbar bg-light">
-                <div className="container-fluid">
+                <div className="">
 
-                    <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top " />
+                    <img src={logo} alt="Logo" width="30" height="24" className="d-inline-block align-text-top me-5 ms-2" />
                     Watch Movies Club
 
                 </div>

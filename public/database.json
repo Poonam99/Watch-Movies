@@ -1,0 +1,38 @@
+[
+    {
+        "id": "6334b9f8acb23d216c23717c",
+        "picture": "https://img1.ak.crunchyroll.com/i/spire4/6b4c9dcac0bcdf27fe1d21e75769f8861661079175_main.jpg",
+        "time": 116,
+        "name": "Jujutsu Kaisen"
+    },
+    {
+        "id": "6334b9f86d15e6c37f14adc6",
+        "picture": "https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+        "time": 810,
+        "name": "One Piece"
+    },
+    {
+        "id": "6334b9f84c97e40f4f7985ab",
+        "picture": "https://upload.wikimedia.org/wikipedia/en/9/94/NarutoCoverTankobon1.jpg",
+        "time": 186,
+        "name": "Naruto"
+    },
+    {
+        "id": "6334b9f85258dd2681bebe4f",
+        "picture": "https://m.media-amazon.com/images/M/MV5BYzI0OWJlMjItYmE1NS00YzE2LWExNDAtMDM3MDA5MzM5NmExXkEyXkFqcGdeQXVyNzA5MDUyODA@._V1_FMjpg_UX1000_.jpg",
+        "time": 91,
+        "name": "Assasination Classroom"
+    },
+    {
+        "id": "6334b9f8eaba18c7a756ffff",
+        "picture": "https://www.anime-planet.com/images/anime/covers/thumbs/8828.jpg?t=1630331696",
+        "time": 155,
+        "name": "Classroom of the elite"
+    },
+    {
+        "id": "6334b9f8ee02e3bbf2dbf30c",
+        "picture": "https://m.media-amazon.com/images/M/MV5BN2FlYjYxMTMtZGQzYy00OWU2LTkyYWMtNWJhODhmZmM0N2FhXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
+        "time": 73,
+        "name": "Black Clover"
+    }
+]

@@ -1,4 +1,5 @@
 import React from 'react';
+import img from ".././Images/_ASV2662.jpg"
 
 const Profile = () => {
     return (
