@@ -1,53 +1,60 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Content from '../Content/Content';
+import Profile from '../Profile/Profile';
 
 const Home = () => {
-    const [Materials, setMaterials] = useState([]);
+
+
+    const [contents, setContents] = useState([]);
 
     const [watch, setWatch] = useState([0]);
 
-    const x = localStorage.getItem('container')
+    const x = localStorage.getItem('breakpriod')
     const [breaks, setBreaks] = useState([x]);
 
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
-            .then(data => setMaterials(data))
+            .then(data => setContents(data))
     }, [])
 
-    const addToField = (time) => {
-        const newbreakTime = parseInt(break) + time;
-        setWatch(newbreakTime)
+    const addToShow = (time) => {
+        const newWatchTime = parseInt(watch) + time;
+        setWatch(newWatchTime)
     }
 
-    const addcontainer = (value) => {
+    const addBreakpriod = (value) => {
 
-        const newcontainer = value;
-        setBreaks(newcontainer)
-        localStorage.setItem("container", newcontainer);
+        const newBreakTime = value;
+        setBreaks(newBreakTime)
+        localStorage.setItem("breakpriod", newBreakTime);
     }
-    const notify = () => toast("Yahoo ,the full movie series are completed. Congratulations!!");
+
+    const notify = () => toast("Yay You Completed the whole Series. Congratulations!!");
+
     return (
         <div>
             <section className='container text-center'>
                 <div className="row p-5">
                     <div className=" col-lg-9 col-md-12">
-                        <h4 className='text-start mb-5'>Select the movie you want to watch today.</h4>
+                        <h4 className='text-start mb-5'>please ,select your favourit movie.</h4>
                         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                             {
-                                Materials.map(Materials => <Materials
-                                    key={Materials.id}
-                                    Materials={Materials}
-                                    addToField={addToField}
-                                ></Materials>)
+                                contents.map(content => <Content
+                                    key={content.id}
+                                    content={content}
+                                    addToField={addToShow}
+                                ></Content>)
                             }
                         </div>
                     </div>
                     <div className=" col-lg-3 pt-5">
-                        <Personal></Personal>
-                        <container
-                            addcontainer={addcontainer}
 
-                        ></container>
+                        <Profile></Profile>
+                        <BreakTime
+                            addBreakTime={addBreakTime}
+
+                        ></BreakTime>
                         <Details
                             watch={watch}
                             breaks={breaks}
@@ -58,7 +65,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <h1 className='p-2'>Questions and  Answers</h1>
+                <h1 className='p-2'>Questions and Answers</h1>
                 <div className="row row-cols-1 row cols-md-2 row-cols-lg-3 g-4 p-2 m-3">
 
                     <div className="col card">
@@ -96,7 +103,7 @@ const Home = () => {
                                     <li>fetch API data</li>
                                     <li>validating input field</li>
                                     <li>live filtering</li>
-                                    <li>trigger movies on new array value</li>
+                                    <li>trigger animation on new array value</li>
                                     <li>update paragraph list on fetched API data update</li>
                                     <li>updating fetched API data to get BTC updated price</li>
                                 </ol>
@@ -105,7 +112,8 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-        </div >
+        </div>
     );
 };
+
 export default Home;

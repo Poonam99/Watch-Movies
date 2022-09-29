@@ -1,20 +1,18 @@
 import React from 'react';
 
 const Materials = (props) => {
-    const { name, time, picture } = props.content;
+
+
+    const { watch, breaks } = props
     return (
-        <div>
-            <div className="col g-5">
-                <div className="card pb-2">
-                    <img src={picture} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h6 className="card-title">Name: {name}</h6>
-                        <p className="card-text">Time: {time}m</p>
-                    </div>
-                    <div className='d-flex justify-content-center align-items-center'>
-                        <button onClick={() => props.addToField(time)} className='btn btn-primary btn-sm w-50 '>Watch</button>
-                    </div>
-                </div>
+        <div className='p-3'>
+            <h4 className='p-2'>watch time</h4>
+            <div className='d-flex justify-content-between'>
+
+                <h6>Total Watch Time: {watch}m</h6>
+            </div>
+            <div className='d-flex justify-content-between'>
+                <h6>Break priod: {breaks}m</h6>
             </div>
         </div>
     );
