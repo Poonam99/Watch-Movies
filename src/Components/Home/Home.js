@@ -77,46 +77,11 @@ const Home = () => {
 
                     <div className="col card">
                         <div className="card-body">
-                            <h3 className="card-title">How does react Work?</h3>
-                            <p className="card-text text-start">React implements a virtual DOM, which is essentially a JavaScript version of the DOM tree. Therefore, it will utilize a virtual version of the DOM whenever it wants to read from or write to it. The virtual DOM will then look for the most effective approach to update the DOM of the browser. React elements are simple objects that are less expensive to build than DOM elements in browsers. The DOM is updated by React DOM to match the React elements. Because JavaScript is so quick, it makes sense to have a DOM tree in it to facilitate quick manipulation. React was designed to be used in the browser, however Node.js may also be used on the server to use it there.</p>
+                            <h3 className="card-title">Describe How does react Work?</h3>
+                            <p className="card-text text-start">The DOM tree is simply a JavaScript version of the virtual DOM that React implements. Therefore, whenever it wishes to read from or write to the DOM, it will use a virtual representation of it. The virtual DOM will then seek out the most efficient method for updating the browser's DOM. Simple objects called React elements are easier to create than DOM elements in browsers. React DOM modifies the DOM to correspond with the React elements. Given how rapid JavaScript is, it seems sense to include a DOM tree to allow for quick manipulation. Although Node.js can be used on the server, React was intended to be used in the browser.</p>
                         </div>
                     </div>
-                    <div className="col card">
-                        <div className="card-body">
-                            <h3 className="card-title">Difference between Props and State</h3>
-                            <p className="card-text">
-                                <h2>Props:</h2>
-                                <ol className='text-start'>
-                                    <li>The Data is passed from one component to another.</li>
-                                    <li>It is Immutable (cannot be modified).</li>
-                                    <li>Props can be used with state and functional components.</li>
-                                    <li>Props are read-only.</li>
-                                </ol>
-                                <h2>State:</h2>
-                                <ol className='text-start'>
-                                    <li>The Data is passed within the component only.</li>
-                                    <li>It is Mutable ( can be modified).</li>
-                                    <li>State can be used only with the state components/class component.</li>
-                                    <li>State is both read and write.</li>
-                                </ol>
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col card">
-                        <div className="card-body">
-                            <h3 className="card-title">UseEffect Api is used for other purposes than loading data?</h3>
-                            <p className="card-text"><h2>The purposes of useEffect:</h2>
-                                <ol className='text-start'>
-                                    <li>fetch API data</li>
-                                    <li>validating input field</li>
-                                    <li>live filtering</li>
-                                    <li>trigger animation on new array value</li>
-                                    <li>update paragraph list on fetched API data update</li>
-                                    <li>updating fetched API data to get BTC updated price</li>
-                                </ol>
-                            </p>
-                        </div>
-                    </div>
+
                 </div>
             </section>
         </div>
