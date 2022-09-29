@@ -102,7 +102,16 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-
+                    <div className="col card">
+                        <div className="card-body">
+                            <h3 className="card-title">UseEffect Api is used for other purposes than loading data?</h3>
+                            <p className="card-text"><h2>The purposes of useEffect:</h2>
+                                <p className='text-start'>
+                                    we can perform side effects in our components with the useEffect Hook. Timers, data fetching, and direct DOM updates are a few instances of side effects. Two arguments are accepted by useEffect. Optional: The second parameter.
+                                </p>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
