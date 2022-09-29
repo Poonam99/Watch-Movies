@@ -81,6 +81,27 @@ const Home = () => {
                             <p className="card-text text-start">The DOM tree is simply a JavaScript version of the virtual DOM that React implements. Therefore, whenever it wishes to read from or write to the DOM, it will use a virtual representation of it. The virtual DOM will then seek out the most efficient method for updating the browser's DOM. Simple objects called React elements are easier to create than DOM elements in browsers. React DOM modifies the DOM to correspond with the React elements. Given how rapid JavaScript is, it seems sense to include a DOM tree to allow for quick manipulation. Although Node.js can be used on the server, React was intended to be used in the browser.</p>
                         </div>
                     </div>
+                    <div className="col card">
+                        <div className="card-body">
+                            <h3 className="card-title">Difference between Props vs State,explain the answer.</h3>
+                            <p className="card-text">
+                                <h2>Props:</h2>
+                                <ol className='text-start'>
+                                    <li>The Data is passed from one component to another.</li>
+                                    <li>It is Immutable (cannot be modified).</li>
+                                    <li>Props can be used with state and functional components.</li>
+
+                                </ol>
+                                <h2>State:</h2>
+                                <ol className='text-start'>
+                                    <li>The Data is passed within the component only.</li>
+                                    <li>It is Mutable ( can be modified).</li>
+                                    <li>State can be used only with the state components/class component.</li>
+                                    <li>State is both read and write.</li>
+                                </ol>
+                            </p>
+                        </div>
+                    </div>
 
                 </div>
             </section>
